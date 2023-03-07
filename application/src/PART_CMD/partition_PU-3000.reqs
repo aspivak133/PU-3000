@@ -1,0 +1,37 @@
+name = PART_CMD
+shortName = CMD
+id = 50
+
+requiredPlatformServices = {
+    configuration = Y
+    i2c = Y
+    eventLog = Y
+    logBook = { memoryRegionSize = 8192
+                logBooks = { id = 1
+                             name = CMD_LOGBOOK
+                             maxMsgSize = 32
+                             maxNbLoggedMessages = 100
+                             maxNbInProgressMessages = 1
+                             enableCrc = N
+                           }
+              }
+    io = Y
+    cdn = N
+    nvm = Y
+    filesystem = { fileSystemWorkerTaskPriority = 120 }
+    ip = { nbConnection = 1 }
+    NVRAMMemoryRegions = { name = CMD_NVM
+                           writeAccess = Y
+                           size = 4096
+                           objectNumber = 400
+                           id = NVRAM_1
+                         }
+    audioManager = N 
+
+}
+    
+# Note: OS debug libraries are linked into the partition in
+#       order to benefit from convenient printf-family functions, 
+#       therefore simplifying the application code.
+#       However, debug libraries are NOT certifiable.
+specificCompilation = { useOSDebugLibraries = Y }

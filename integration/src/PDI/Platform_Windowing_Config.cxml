@@ -1,0 +1,31 @@
+<!-- ?xml version="1.0" encoding="utf-8"? -->
+<CONFIGURATION name="WINDOWING_CONFIG" version="00.00.00.02" description="Configuration for the windowing" >
+  <RECORD_WINDOWINGCONFIG id="0001" name="WINDOWING_CONFIG" version="01.00.00.01" description="Windowing configuration" file_name="WINDOW_CFG.dat">    
+    <WINDOWING_CONFIG>
+
+      <DISPLAY_CONFIG displayUID="0">
+        <SCREEN_CONFIG  screenUID="0" width="768" height="1024"/>
+      </DISPLAY_CONFIG>
+           
+#if defined(INTEGRATION_MFD_3068) || defined (INTEGRATION_SIMPHONY)
+      <WINDOW_CONFIG windowUID="0" name="WIN_1" width="768" height="1024" x="0" y="0" bootTime="-1" runTime="-1"/>
+      <WINDOW_CONFIG windowUID="1" name="WIN_2" width="768" height="1024" x="0" y="0" bootTime="-1" runTime="-1"/>
+#else // VPU-3000
+      <WINDOW_CONFIG windowUID="0" name="WIN_1" width="1400" height="1050" x="0" y="0" bootTime="-1" runTime="-1"/>
+      <WINDOW_CONFIG windowUID="1" name="WIN_2" width="1400" height="1050" x="0" y="0" bootTime="-1" runTime="-1"/>
+#endif
+      
+      <COMPOSITION_CONFIG compositionUID="0">
+        <WINDOW_COMPOSITION window="0" transparency="false" map="true"/> <!-- CMD -->
+      </COMPOSITION_CONFIG>
+      <COMPOSITION_CONFIG compositionUID="1">
+        <WINDOW_COMPOSITION window="0" transparency="false" map="true"/> <!-- CMD -->
+        <WINDOW_COMPOSITION window="1" transparency="true"  map="true"/> <!-- LIGHT -->
+      </COMPOSITION_CONFIG>
+      
+      <TREE_CONFIG display="0" screen="0" composition="0"/>
+      <TREE_CONFIG display="0" screen="0" composition="1"/>
+                
+    </WINDOWING_CONFIG>
+  </RECORD_WINDOWINGCONFIG>
+</CONFIGURATION>

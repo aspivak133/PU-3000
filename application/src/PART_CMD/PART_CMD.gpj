@@ -1,0 +1,154 @@
+#!gbuild
+# ======================================================= #
+#
+# @file PART_CMD.gpj
+#
+# @brief Top-level project for partition PART_CMD
+#
+#
+#
+#=============================================================================
+#
+# THIS FILE CONTAINS CMC ELECTRONICS PROPRIETARY INFORMATION AND SHALL
+# NOT BE COPIED OR DISTRIBUTED TO THIRD PARTIES WITHOUT THE PRIOR WRITTEN
+# PERMISSION OF CMC ELECTRONICS INC.
+#
+#=============================================================================
+
+# Environment variables
+#----------------------
+import GHS_RTOS
+import GHS_BIN
+import PSA_GEN_SRC_DIR
+import PSA_BUILD_DIR
+import PSA_EXPORT_DIR
+import PSA_CPM_DIR
+import PSA_RD_DIR
+import PSA_GPM_DIR
+import PSA_PLATFORM_DIR
+import PSA_HARDWARE_TYPE
+import PSA_PLATFORM_RELEASE
+
+# Target configuration
+#---------------------
+primaryTarget=ppc_integrity.tgt
+
+# Project configuration
+#----------------------
+[Program]
+	-bsp cmc-cpm-tump
+	-os_dir ${GHS_RTOS}
+	-G
+	-Dccsrbar=0xbc000000
+	-Onone
+	-sda=0
+	-ansi
+	--ee
+	--slash_comment
+	--signed_chars
+	--no_exceptions
+	--no_alternative_tokens
+	-noAltiVec
+	-Xnosmallprologue
+	--eel
+	-inline_prologue
+	-lnk=-crc_initval=0xffffffff
+	-lnk=-crc_polynomial=0x04c11db7
+	--long_long
+	-private_defines
+	-non_shared
+	-bigendian
+	:select=ppc
+	:select=c
+	-intexoption -crc_initval=0xffffffff
+	-intexoption -crc_polynomial=0x04c11db7
+	-intexoption -allowsetinitialtaskpriority
+	-linker.args=-strict_overlap_check
+	-dblink.args=-no_warn_for_dbo_not_found
+	-cxxfe.args=--option=30
+	--no_wrap_diagnostics
+	--brief_diagnostics
+	-Wno-undef
+    -cxx_compiler.args=--mih
+    --diag_warning=1
+
+# Output
+# ------
+	-o ${PSA_EXPORT_DIR}\PART_CMD\PART_CMD.part
+	
+# Object directory (intermediate output)
+# --------------------------------------
+	-object_dir=${PSA_BUILD_DIR}\PART_CMD
+
+# Compiler directives
+#--------------------
+    -D_INTEGRITY_
+    -D__RTOS__
+    -DINT_178B
+    -DCLIBS_178B
+    -DARINC653_2010
+    -DCPM_PERF
+	{ streq(PSA_HARDWARE_TYPE, "MFD-3068") } -DINTEGRATION_MFD_3068
+	{ streq(PSA_HARDWARE_TYPE, "PU-3000")  } -DINTEGRATION_PU_3000
+	{ streq(PSA_HARDWARE_TYPE, "VPU-3000") } -DINTEGRATION_VPU_3000
+	{ streq(PSA_PLATFORM_RELEASE, "RELEASE2")) } -DINTEGRATION_RELEASE_2
+    
+# Source and Include Dir
+# ----------------------
+	:sourceDir=${PSA_GEN_SRC_DIR}\PART_CMD
+	:sourceDir=.
+    -I${GHS_RTOS}\INTEGRITY-include
+    -I${GHS_RTOS}\INTEGRITY-include\ipflite
+    -I${GHS_RTOS}\ARINC-include
+    -I${GHS_RTOS}\ansi
+    -I${GHS_RTOS}\shared
+    -I${PSA_CPM_DIR}\Drivers\api
+    -I${PSA_CPM_DIR}\Services\api 
+    -I${PSA_CPM_DIR}\StdInclude 
+    -I${PSA_RD_DIR}\Drivers\api
+    -I${PSA_RD_DIR}\Services\api 
+    -I${PSA_RD_DIR}\StdInclude 
+    -I${PSA_GPM_DIR}\openGL\api
+	-I${PSA_GPM_DIR}\openGL\api\GL
+	-I${PSA_GPM_DIR}\openGL\api\GLX
+	-I${PSA_GPM_DIR}\openGL\api\XOSC
+    -I${PSA_GPM_DIR}\porting_layer\api
+    -I${PSA_PLATFORM_DIR}\Libraries\I2C\api
+    -I${PSA_PLATFORM_DIR}\Libraries\PlatformParameter\api
+    -I${PSA_PLATFORM_DIR}\Libraries\PlatformHealth\api
+    -I${PSA_GEN_SRC_DIR}\PART_CMD
+    -I.
+    # The following is not certifiable, but is convenient for the printf()
+    # family functions
+    -I${GHS_BIN}\ansi
+
+# Library search directories
+# ----------
+  -L${PSA_RD_DIR}\Services\libs
+  -L${PSA_RD_DIR}\Drivers\libs
+
+# Libraries
+# ----------
+# None
+
+# Source files
+# ------------
+PART_CMD.h
+main.cpp
+config.h
+config.cpp
+ip.h
+ip.cpp
+io.h
+io.cpp
+command.h
+command.cpp
+i2c.h
+i2c.cpp
+logging.h
+logging.cpp
+filesystem.h
+filesystem.cpp
+PART_CMD.ld
+
+PART_CMD_integ_GHS.gpj

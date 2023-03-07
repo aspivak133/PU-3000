@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PART_CMD", ".\PART_CMD_VS_2017.vcxproj", "{896BA804-EDCD-48C0-9FCE-100000000001}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_VS17|Win32 = Debug_VS17|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{896BA804-EDCD-48C0-9FCE-100000000001}.Debug_VS17|Win32.ActiveCfg = Debug_VS17|Win32
+		{896BA804-EDCD-48C0-9FCE-100000000001}.Debug_VS17|Win32.Build.0   = Debug_VS17|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7EA843A-2C35-4874-9865-21D0742D4793}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+integrationName = CMD_APP
+executableFileName = CMD_APP.ofp
+integrationParameters = INTEGRATION_SIMPHONY
+
+platform = { directory =  ../../dependencies/185-617644-001wr/Platform/CMA-70XX_noncert/WIN32_VS17/DEBUG
+             cdn = N
+             dataloader = N
+             audio = N
+             ioConfigCxmlFile = ./PDI/Platform_IO_Config.cxml
+             ipConfigCxmlFile = ./PDI/Platform_IP_Config.cxml
+             gpm = { nbGpm = 1
+                     physicalNLVMSizePerGPM = 0x04000000
+                     windowingGraphicMemory = { NLVMSize = 0x03000000 cachedNLVMSize = 0x04800000 }
+                     applicationGraphicMemory = { partition = PART_CMD 
+                                                  memory = { NLVMSize = 0x03000000 cachedNLVMSize = 0x04800000 }
+                                                },
+                                                { partition = PART_LIGHT 
+                                                  memory = { NLVMSize = 0x00600000 cachedNLVMSize = 0x02400000 }
+                                                }
+                   }
+             windowingConfigCxmlFile = ./PDI/Platform_Windowing_Config.cxml
+             gpmConfigCxmlFile = ./PDI/Platform_Graphic_Config.cxml
+             logBookAllocations = { partition = PART_CMD
+                                    memoryRegionPhysicalAddress = 0xF5100000
+                                    memoryRegionSize = 0x2000
+                                  }
+             kernelNVRAMMemoryRegions = { id = NVRAM_1
+                                          size = 4096
+                                          physicalAddress = 0xF5102000
+                                        }
+           }
+           
+applicationPartitions = ../../application/export/SIMphony/PART_CMD/partition_SIMphony.reqs,
+                        ../../application/export/SIMphony/PART_LIGHT/partition_SIMphony.reqs
+scheduleFile = ../gen_src/SIMphony/schedule.reqs
+applicationA653ConnectionsXMLFile = ./channels/Integration_A653Config_Channels.xml
+integrationSourceDir = ../gen_src/SIMphony
+integrationBuildDir = ../build/SIMphony/OFP_temp
+integrationExportDir = ../export/SIMphony
+integrationChannelBaseIndex = 1000

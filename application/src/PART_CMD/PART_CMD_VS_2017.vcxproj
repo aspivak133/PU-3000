@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(PSA_PLATFORM_ROOT_DIR)\CPM_noncert\WIN32\Tools\CommonProperties.props" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_VS17|Win32">
+      <Configuration>Debug_VS17</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{896BA804-EDCD-48C0-9FCE-100000000001}</ProjectGuid>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>PART_CMD_WIN32</RootNamespace>
+    <ProjectName>PART_CMD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(PSA_PLATFORM_DIR)\Target\SIMphonyCommonProperties.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <TargetName>libPART_CMD</TargetName>
+    <OutDir>$(PSA_EXPORT_DIR)\PART_CMD\</OutDir>
+    <IntDir>$(PSA_BUILD_DIR)\PART_CMD\</IntDir>
+    <IncludePath>$(IAP7K_SIMPHONY_HOME)\API\Integrity_Emulator;$(PSA_CPM_DIR)\StdInclude;$(PSA_CPM_DIR)\Drivers\api;$(PSA_CPM_DIR)\Services\api;$(PSA_CPM_DIR)\Utilities\api;$(PSA_RD_DIR)\Drivers\api;$(PSA_RD_DIR)\StdInclude;$(PSA_RD_DIR)\Services\api;$(PSA_GPM_DIR)\openGL\api;$(PSA_GPM_DIR)\openGL\api\XOSC;$(PSA_GPM_DIR)\porting_layer\api;$(PSA_GPM_DIR)\platform_layer\api;$(PSA_PLATFORM_DIR)\Libraries\PlatformParameter\api;$(PSA_PLATFORM_DIR)\Libraries\PlatformHealth\api;$(PSA_PLATFORM_DIR)\Libraries\PortDrvFrontEndServices\api;$(PSA_GEN_SRC_DIR)\PART_CMD;$(PSA_SRC_DIR)\PART_CMD;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>CPM_DEBUG;INTEGRATION_SIMPHONY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(PSA_GEN_SRC_DIR)\PART_CMD\PART_CMD.h" />
+    <ClInclude Include="$(PSA_SRC_DIR)\PART_CMD\graphics.h" />
+    <ClInclude Include="$(PSA_SRC_DIR)\PART_CMD\ip.h" />
+    <ClInclude Include="$(PSA_SRC_DIR)\PART_CMD\io.h" />
+    <ClInclude Include="$(PSA_SRC_DIR)\PART_CMD\command.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(PSA_GEN_SRC_DIR)\PART_CMD\PART_CMD_integ_gen.c">
+        <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(PSA_SRC_DIR)\PART_CMD\main.cpp" />    
+    <ClCompile Include="$(PSA_SRC_DIR)\PART_CMD\config.cpp" />
+    <ClCompile Include="$(PSA_SRC_DIR)\PART_CMD\ip.cpp" />
+    <ClCompile Include="$(PSA_SRC_DIR)\PART_CMD\io.cpp" />
+    <ClCompile Include="$(PSA_SRC_DIR)\PART_CMD\command.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

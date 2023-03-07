@@ -1,0 +1,57 @@
+<!-- ?xml version="1.0" encoding="utf-8"? -->
+<CONFIGURATION name="GPM_CONFIG" version="00.00.00.02" description="Configuration for the gpm" >
+  <RECORD_GPMCONFIG id="0001" name="GPM_CONFIG" version="01.00.00.01" description="GPM Configuration" file_name="GPM_CFG.dat">
+
+    <GPM_CONFIG>
+
+      <GPM>
+        <OUTPUTS>
+#if defined(INTEGRATION_MFD_3068)
+          <STREAM UID="0" width="1024" height="768" signal="LVDS2" safetylink="true"> </STREAM>
+          <STREAM UID="1" width="1024" height="768" signal="DVI3" safetylink="false"> </STREAM>
+#elif defined (INTEGRATION_SIMPHONY)
+          <STREAM UID="0" width="1024" height="768" signal="LVDS2" safetylink="false"> </STREAM>
+          <STREAM UID="1" width="1024" height="768" signal="DVI3" safetylink="false"> </STREAM>
+#else // VPU-3000
+          <STREAM UID="0" width="1400" height="1050" signal="DVI3" safetylink="false"> </STREAM>
+          <STREAM UID="1" width="1400" height="1050" signal="DVI4" safetylink="false"> </STREAM>
+#endif
+        </OUTPUTS> 
+                
+        <INPUTS>
+          <STREAM signal="NTSC" format="svideo"> </STREAM>                    
+        </INPUTS>
+                
+        <SCREENS>
+#if defined(INTEGRATION_MFD_3068)
+          <SCREEN UID="0" orientation="270">
+            <OUTPUT>0</OUTPUT>
+            <OUTPUT>1</OUTPUT>
+          </SCREEN>
+#elif defined (INTEGRATION_SIMPHONY)
+          <SCREEN UID="0" orientation="90">
+            <OUTPUT>0</OUTPUT>
+            <OUTPUT>1</OUTPUT>
+          </SCREEN>
+#else // VPU-3000
+          <SCREEN UID="0" orientation="0">
+            <OUTPUT>0</OUTPUT>
+            <OUTPUT>1</OUTPUT>
+          </SCREEN>
+#endif          
+        </SCREENS>               
+      </GPM>            
+ 
+      <PARTITIONS>        
+        <PARTITION UID="1" name="CMD" maxContext="2" maxVideoMemory="128">
+          <ATTRIBUTE>"tciPermission"</ATTRIBUTE>
+          <ATTRIBUTE>"videoControl"</ATTRIBUTE>
+        </PARTITION>
+        <PARTITION UID="2" name="LIGHT" maxContext="2" maxVideoMemory="128">
+        </PARTITION>
+      </PARTITIONS>
+
+    </GPM_CONFIG>
+
+  </RECORD_GPMCONFIG>
+</CONFIGURATION>

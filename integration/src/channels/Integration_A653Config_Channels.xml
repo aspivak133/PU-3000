@@ -1,0 +1,277 @@
+<!-- 
+ * @file Integration_A653Config_Channels.xml
+ *
+ * @brief Channel configuration for intra-application partition communication
+ -->
+<!--
+ *===========================================================================
+ *
+ * THIS FILE CONTAINS CMC ELECTRONICS PROPRIETARY INFORMATION AND SHALL
+ * NOT BE COPIED OR DISTRIBUTED TO THIRD PARTIES WITHOUT THE PRIOR WRITTEN
+ * PERMISSION OF CMC ELECTRONICS INC.
+ *
+ *===========================================================================
+ -->
+
+  <!-- I/O ports: discrete inputs -->
+
+  <Channel ChannelIdentifier="1" ChannelName="CHAN_IO_01">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN1" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="2" ChannelName="CHAN_IO_02">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN6" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="3" ChannelName="CHAN_IO_03">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN11" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="4" ChannelName="CHAN_IO_04">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN19" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="5" ChannelName="CHAN_IO_05">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN33" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="6" ChannelName="CHAN_IO_06">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN25" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="7" ChannelName="CHAN_IO_07">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN31" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="8" ChannelName="CHAN_IO_08">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_IN41" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <!-- I/O ports: discrete outputs -->  
+
+  <Channel ChannelIdentifier="9" ChannelName="CHAN_IO_09">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_OUT1" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="10" ChannelName="CHAN_IO_10">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_OUT4" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="11" ChannelName="CHAN_IO_11">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_OUT14" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="12" ChannelName="CHAN_IO_12">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_OUT11" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="13" ChannelName="CHAN_IO_13">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_OUT7" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="14" ChannelName="CHAN_IO_14">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="DISC_OUT9" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <!-- I/O ports: ARINC-429 TX. -->
+  <Channel ChannelIdentifier="15" ChannelName="CHAN_IO_15">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_OUT_01" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="16" ChannelName="CHAN_IO_16">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_OUT_03" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="17" ChannelName="CHAN_IO_17">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_OUT_05" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="18" ChannelName="CHAN_IO_18">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_OUT_09" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="19" ChannelName="CHAN_IO_19">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_IN_01" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="20" ChannelName="CHAN_IO_20">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_IN_05" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="21" ChannelName="CHAN_IO_21">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_IN_09" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="22" ChannelName="CHAN_IO_22">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="A429_IN_13" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <!-- I/O ports: Serial TX. -->
+
+  <Channel ChannelIdentifier="23" ChannelName="CHAN_IO_23">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="SERIAL_OUT_01" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="24" ChannelName="CHAN_IO_24">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="SERIAL_OUT_02" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="25" ChannelName="CHAN_IO_25">
+    <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="SERIAL_OUT_03" Procedure="" />
+    </Source>
+    <Destination></Destination>
+  </Channel>
+  
+  <!-- I/O ports: Serial RX. -->
+
+  <Channel ChannelIdentifier="26" ChannelName="CHAN_IO_26">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="SERIAL_IN_01" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="27" ChannelName="CHAN_IO_27">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="SERIAL_IN_02" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="28" ChannelName="CHAN_IO_28">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="SERIAL_IN_03" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="47" ChannelName="CHAN_IO_38">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="AIN1" Procedure="" />
+    </Destination>
+  </Channel>
+  
+  <Channel ChannelIdentifier="53" ChannelName="CHAN_IO_44">
+  <Source>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="CAN_BUS1_TX" Procedure="" />
+  </Source>
+  <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="CAN_BUS1_RX1" Procedure="" />
+  </Destination>
+  </Channel>
+  
+  <Channel ChannelIdentifier="54" ChannelName="CHAN_IO_45">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="AIN15" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="55" ChannelName="CHAN_IO_46">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="AIN35" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="56" ChannelName="CHAN_IO_47">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="AIN41" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="57" ChannelName="CHAN_IO_48">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="PAP_1" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="58" ChannelName="CHAN_IO_49">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="PAP_2" Procedure="" />
+    </Destination>
+  </Channel>
+
+  <Channel ChannelIdentifier="59" ChannelName="CHAN_IO_50">
+    <Source></Source>
+    <Destination>
+      <Standard_Partition PartitionIdentifier="50" PartitionName="PART_CMD" PortName="GPIO_WOW" Procedure="" />
+    </Destination>
+  </Channel>

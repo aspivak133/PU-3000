@@ -1,0 +1,45 @@
+<!-- 
+ * @file PART_CMD_A653Config_Health.xml
+ *
+ * @brief PART_CMD Partition Health Configuration
+ -->
+<!--
+ *===========================================================================
+ *
+ * THIS FILE CONTAINS CMC ELECTRONICS PROPRIETARY INFORMATION AND SHALL
+ * NOT BE COPIED OR DISTRIBUTED TO THIRD PARTIES WITHOUT THE PRIOR WRITTEN
+ * PERMISSION OF CMC ELECTRONICS INC.
+ *
+ *===========================================================================
+ -->
+
+<PartitionHMTable MultiPartitionHMTableNameRef="MPT1" TableName="PART_CMD_HM_table">
+
+  <!-- DEADLINE_MISSED -->
+  <ErrorAction ErrorIdentifierRef="0" ErrorLevel="PROCESS" PartitionRecoveryAction="IDLE"/>
+
+  <!-- APPLICATION_ERROR -->
+  <ErrorAction ErrorIdentifierRef="1" ErrorLevel="PROCESS" PartitionRecoveryAction="IGNORE"/>
+
+  <!-- NUMERIC ERROR -->
+  <ErrorAction ErrorIdentifierRef="2" ErrorLevel="PROCESS" PartitionRecoveryAction="IGNORE"/>
+
+  <!-- ILLEGAL_REQUEST -->
+  <ErrorAction ErrorIdentifierRef="3" ErrorLevel="PROCESS" PartitionRecoveryAction="IDLE"/>
+
+  <!-- STACK_OVERFLOW -->
+  <ErrorAction ErrorIdentifierRef="4" ErrorLevel="PROCESS" PartitionRecoveryAction="IDLE"/>
+
+  <!-- MEMORY_VIOLATION -->
+  <ErrorAction ErrorIdentifierRef="5" ErrorLevel="PROCESS" PartitionRecoveryAction="IDLE"/>
+
+  <!-- HARDWARE_FAULT -->
+  <ErrorAction ErrorIdentifierRef="6" ErrorLevel="PROCESS" PartitionRecoveryAction="IGNORE"/>
+
+  <!-- POWER_FAIL -->
+  <ErrorAction ErrorIdentifierRef="7" ErrorLevel="PROCESS" PartitionRecoveryAction="IGNORE"/>
+
+  <!-- CHECKSUCCESS_FAIL -->
+  <ErrorAction ErrorIdentifierRef="8" ErrorLevel="PARTITION" PartitionRecoveryAction="IDLE"/>
+  
+</PartitionHMTable>

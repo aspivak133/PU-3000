@@ -1,0 +1,90 @@
+<!-- 
+ * @file PART_CMD_A653Config_Partition.xml
+ *
+ * @brief PART_CMD Partition Configuration
+ -->
+<!--
+ *===========================================================================
+ *
+ * THIS FILE CONTAINS CMC ELECTRONICS PROPRIETARY INFORMATION AND SHALL
+ * NOT BE COPIED OR DISTRIBUTED TO THIRD PARTIES WITHOUT THE PRIOR WRITTEN
+ * PERMISSION OF CMC ELECTRONICS INC.
+ *
+ *===========================================================================
+ -->
+<Partition PartitionIdentifier="50" 
+           PartitionName="PART_CMD" 
+           FileName="PART_CMD.part"
+           KernelPartition="false" 
+           ARINC653Partition="true"
+           Language="C++" 
+           InitialProcessLength="0x10000"
+           MemoryPoolSize="0x400000"
+           ErrorProcessLength="0x1000"
+           StartInitial="true"  >   
+  
+  <!-- Process definition, demo process -->
+  <Process Name="PROC_TEST" EntryPoint="procTestEntryPoint" Priority="150" StackSize="0x10000" />
+
+  <!-- I/O ports: discrete inputs -->
+  <Sampling_Port Name="DISC_IN1"      Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x4073" MaxTransfersPerWindow="0" />
+  <Sampling_Port Name="DISC_IN6"      Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x407B" MaxTransfersPerWindow="0" />
+  <Sampling_Port Name="DISC_IN11"     Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x4083" MaxTransfersPerWindow="0" />
+  <Sampling_Port Name="DISC_IN19"     Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x408B" MaxTransfersPerWindow="0" />
+  <Sampling_Port Name="DISC_IN33"     Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x4093" MaxTransfersPerWindow="0" />
+  <Sampling_Port Name="DISC_IN25"     Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x409B" MaxTransfersPerWindow="0" />
+  <Sampling_Port Name="DISC_IN31"     Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x40A3" MaxTransfersPerWindow="0" />
+  <Sampling_Port Name="DISC_IN41"     Direction="DESTINATION" MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x40AB" MaxTransfersPerWindow="0" />
+
+  <!-- I/O ports: discrete outputs -->  
+  <Sampling_Port Name="DISC_OUT1"     Direction="SOURCE"      MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x4061" /> 
+  <Sampling_Port Name="DISC_OUT4"     Direction="SOURCE"      MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x4064" />  
+  <Sampling_Port Name="DISC_OUT14"    Direction="SOURCE"      MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x4070" />  
+  <Sampling_Port Name="DISC_OUT11"    Direction="SOURCE"      MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x406D" />  
+  <Sampling_Port Name="DISC_OUT7"     Direction="SOURCE"      MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x4068" />  
+  <Sampling_Port Name="DISC_OUT9"     Direction="SOURCE"      MaxMessageSize="36" RefreshRateSeconds="0.050"  PortMapping="0x406A" />  
+
+  <!-- I/O ports: Analog inputs -->  
+  <Sampling_Port  Name="AIN1"    Direction="DESTINATION" MaxMessageSize="40"  RefreshRateSeconds="0.050" PortMapping="0x4001" MaxTransfersPerWindow="0" />
+  <Sampling_Port  Name="AIN15"   Direction="DESTINATION" MaxMessageSize="40"  RefreshRateSeconds="0.050" PortMapping="0x401D" MaxTransfersPerWindow="0" />
+  <Sampling_Port  Name="AIN35"   Direction="DESTINATION" MaxMessageSize="40"  RefreshRateSeconds="0.050" PortMapping="0x4045" MaxTransfersPerWindow="0" />
+  <Sampling_Port  Name="AIN41"   Direction="DESTINATION" MaxMessageSize="40"  RefreshRateSeconds="0.050" PortMapping="0x404E" MaxTransfersPerWindow="0" />
+ 
+  <!-- I/O ports:GPIO -->
+  <Sampling_Port  Name="GPIO_WOW"   Direction="DESTINATION" MaxMessageSize="36"  RefreshRateSeconds="0.050" PortMapping="0x414E" MaxTransfersPerWindow="0" />
+
+  <!-- I/O ports: CAN bus -->
+  <Queuing_Port Name="CAN_BUS1_TX" Direction="SOURCE" MaxMessageSize="2084" MaxNbMessages="1" PortMapping="0x4169" />
+  <Queuing_Port Name="CAN_BUS1_RX1" Direction="DESTINATION" MaxMessageSize="2084" MaxNbMessages="1" PortMapping="0x416B" MaxTransfersPerWindow="0" />
+
+  <!-- I/O ports: Port Access Points (PAP) -->
+  <Queuing_Port Name="PAP_1" Direction="DESTINATION" MaxMessageSize="2084" MaxNbMessages="1" PortMapping="0x4190" MaxTransfersPerWindow="0" />
+  <Queuing_Port Name="PAP_2" Direction="DESTINATION" MaxMessageSize="2084" MaxNbMessages="1" PortMapping="0x4191" MaxTransfersPerWindow="0" />
+
+  <!-- I/O ports: ARINC-429 TX.
+       The MaxMessageSize field is sized in order to be able to queue up to 10 labels at once -->
+  <Queuing_Port  Name="A429_OUT_01"   Direction="SOURCE"      MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40BD" />
+  <Queuing_Port  Name="A429_OUT_03"   Direction="SOURCE"      MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40BF" />
+  <Queuing_Port  Name="A429_OUT_05"   Direction="SOURCE"      MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40C1" />
+  <Queuing_Port  Name="A429_OUT_09"   Direction="SOURCE"      MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40C5" />
+
+  <!-- I/O ports: ARINC-429 RX.
+       The MaxMessageSize field is sized in order to be able to retrieve up to 10 labels at once -->
+  <Queuing_Port  Name="A429_IN_01"    Direction="DESTINATION" MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40C7" MaxTransfersPerWindow="0" />
+  <Queuing_Port  Name="A429_IN_05"    Direction="DESTINATION" MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40CB" MaxTransfersPerWindow="0" />
+  <Queuing_Port  Name="A429_IN_09"    Direction="DESTINATION" MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40CF" MaxTransfersPerWindow="0" />
+  <Queuing_Port  Name="A429_IN_13"    Direction="DESTINATION" MaxMessageSize="76"    MaxNbMessages="1" PortMapping="0x40D3" MaxTransfersPerWindow="0" />
+
+  <!-- I/O ports: Serial TX.
+       The MaxMessageSize field is sized in order to be able to queue up to 2048 characters at once -->  
+  <Queuing_Port  Name="SERIAL_OUT_01" Direction="SOURCE"      MaxMessageSize="2084"  MaxNbMessages="1" PortMapping="0x40EF" />
+  <Queuing_Port  Name="SERIAL_OUT_02" Direction="SOURCE"      MaxMessageSize="2084"  MaxNbMessages="1" PortMapping="0x40F1" />
+  <Queuing_Port  Name="SERIAL_OUT_03" Direction="SOURCE"      MaxMessageSize="2084"  MaxNbMessages="1" PortMapping="0x40F3" />
+
+  <!-- I/O ports: Serial RX.
+       The MaxMessageSize field is sized in order to be able to receive up to 2048 characters at once -->  
+  <Queuing_Port  Name="SERIAL_IN_01"  Direction="DESTINATION" MaxMessageSize="2084"  MaxNbMessages="1" PortMapping="0x40F0" MaxTransfersPerWindow="0" />
+  <Queuing_Port  Name="SERIAL_IN_02"  Direction="DESTINATION" MaxMessageSize="2084"  MaxNbMessages="1" PortMapping="0x40F2" MaxTransfersPerWindow="0" />
+  <Queuing_Port  Name="SERIAL_IN_03"  Direction="DESTINATION" MaxMessageSize="2084"  MaxNbMessages="1" PortMapping="0x40F4" MaxTransfersPerWindow="0" />
+
+</Partition>

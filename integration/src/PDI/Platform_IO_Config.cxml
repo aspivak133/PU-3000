@@ -1,0 +1,136 @@
+<!-- ?xml version="1.0" encoding="utf-8"? -->
+<CONFIGURATION name="PLATFORM_CONFIG" version="00.00.00.02" description="Configuration for the platform" >
+
+    <!-- GENERATED_GHS_OBJECT_IDS -->
+
+    <RECORD_PLATFORM_IOCONFIG id="902" name="PLAT_IO_CONFIG" version="00.00.00.01" description="Platform IO configuration" file_name="PLATIOCFG.dat">
+
+      <default>
+        <analogInputs>
+          <AnalogInputPort uid="0x4001" name="AIN1"       authorizedPartition="PART_CMD" range="-8.5V_to_8.5V"/>
+          <AnalogInputPort uid="0x401D" name="AIN15"      authorizedPartition="PART_CMD" range="-2.5V_to_2.5V"/>
+          <AnalogInputPort uid="0x4045" name="AIN35"      authorizedPartition="PART_CMD" range="-36V_to_36V"/>
+          <AnalogInputPort uid="0x404E" name="AIN41"      authorizedPartition="PART_CMD" range="50V_to_150V"/>
+        </analogInputs>
+            
+        <analogOutputVoltages>
+        </analogOutputVoltages>
+            
+        <analogOutputCurrents>
+        </analogOutputCurrents>
+            
+        <discreteInputs>
+          <DiscreteInputPort uid="0x4073" name="DISC_IN1"   authorizedPartition="ALL" drive_mode="28v_open"/>
+          <DiscreteInputPort uid="0x407B" name="DISC_IN6"   authorizedPartition="ALL" drive_mode="open_ground"/>
+          <DiscreteInputPort uid="0x4083" name="DISC_IN11"  authorizedPartition="ALL" drive_mode="open_ground"/>
+          <DiscreteInputPort uid="0x408B" name="DISC_IN19"  authorizedPartition="ALL" drive_mode="open_ground"/>
+          <DiscreteInputPort uid="0x4093" name="DISC_IN33"  authorizedPartition="ALL" drive_mode="open_ground"/>
+          <DiscreteInputPort uid="0x409B" name="DISC_IN25"  authorizedPartition="ALL" drive_mode="open_ground"/>
+          <DiscreteInputPort uid="0x40A3" name="DISC_IN31"  authorizedPartition="ALL" drive_mode="open_ground"/>
+          <DiscreteInputPort uid="0x40AB" name="DISC_IN41"  authorizedPartition="ALL" drive_mode="28v_open"/>
+
+        </discreteInputs>
+            
+        <discreteOutputs>
+          <DiscreteOutputPort uid="0x4061" name="DISC_OUT1"  authorizedPartition="PART_CMD" drive_mode="28v_open"/>
+          <DiscreteOutputPort uid="0x4064" name="DISC_OUT4"  authorizedPartition="PART_CMD" drive_mode="open_ground"/>
+          <DiscreteOutputPort uid="0x4070" name="DISC_OUT14" authorizedPartition="PART_CMD" drive_mode="open_ground"/>
+          <DiscreteOutputPort uid="0x406D" name="DISC_OUT11" authorizedPartition="PART_CMD" drive_mode="open_ground"/>
+          <DiscreteOutputPort uid="0x4068" name="DISC_OUT7"  authorizedPartition="PART_CMD" drive_mode="open_ground"/>
+          <DiscreteOutputPort uid="0x406A" name="DISC_OUT9"  authorizedPartition="PART_CMD" drive_mode="28v_open"/>
+        </discreteOutputs>
+            
+        <digitalInputPulses>
+        </digitalInputPulses>
+            
+        <A429>
+          <A429Port uid="0x40BD"  name="A429_OUT_01" authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40BF"  name="A429_OUT_03" authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40C1"  name="A429_OUT_05" authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40C5"  name="A429_OUT_09" authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40C7"  name="A429_IN_01"   authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40C9"  name="A429_IN_03"   authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40CB"  name="A429_IN_05"   authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40CF"  name="A429_IN_09"   authorizedPartition="PART_CMD" speed_sel="high"/>
+          <A429Port uid="0x40D3"  name="A429_IN_13"   authorizedPartition="PART_CMD" speed_sel="high"/>
+        </A429>
+            
+        <synchros>
+        </synchros>
+            
+        <thermocouples>
+        </thermocouples>
+                       
+        <serials>
+          <SerialPort uid="0x40EF" name="SERIAL_OUT_01" authorizedPartition="PART_CMD" uart_mode="rs422" baud_rate="115200" data_bits="8_bit" parity_mode="none" stop_bits="1_bit"/>
+          <SerialPort uid="0x40F0" name="SERIAL_IN_01" authorizedPartition="PART_CMD" uart_mode="rs422" baud_rate="115200" data_bits="8_bit" parity_mode="none" stop_bits="1_bit"/>
+          <SerialPort uid="0x40F1" name="SERIAL_OUT_02" authorizedPartition="PART_CMD" uart_mode="rs422" baud_rate="115200" data_bits="8_bit" parity_mode="none" stop_bits="1_bit"/>
+          <SerialPort uid="0x40F2" name="SERIAL_IN_02" authorizedPartition="PART_CMD" uart_mode="rs422" baud_rate="115200" data_bits="8_bit" parity_mode="none" stop_bits="1_bit"/>
+          <SerialPort uid="0x40F3" name="SERIAL_OUT_03" authorizedPartition="PART_CMD" uart_mode="rs422" baud_rate="115200" data_bits="8_bit" parity_mode="none" stop_bits="1_bit"/>
+          <SerialPort uid="0x40F4" name="SERIAL_IN_03" authorizedPartition="PART_CMD" uart_mode="rs422" baud_rate="115200" data_bits="8_bit" parity_mode="none" stop_bits="1_bit"/>
+        </serials>
+        
+        <dhas>
+        </dhas>
+            
+        <paps>
+          <PAPPort uid="0x4190" name="PAP_1"   authorizedPartition= "PART_CMD" physical_port_uid="0x416C"/>
+          <PAPPort uid="0x4191" name="PAP_2"   authorizedPartition= "PART_CMD" physical_port_uid="0x416C"/>
+        </paps>
+            
+        <A708>
+        </A708>
+            
+        <CAN>
+          <CANPort uid="0x4169" name="CAN_BUS1_TX"   authorizedPartition="PART_CMD" CANStatusId_mask_filter="0x00000000" CANStatusId_value_filter="0x00000000" CANMsgId_mask_filter="0x00000000" CANMsgId_value_filter="0x00000000"/>
+          <CANPort uid="0x416B" name="CAN_BUS1_RX1"  authorizedPartition="PART_CMD" CANStatusId_mask_filter="0x00000000" CANStatusId_value_filter="0x00000000" CANMsgId_mask_filter="0x00000000" CANMsgId_value_filter="0x00000000"/>
+        </CAN>
+
+      </default>
+        
+      <override>
+        <analogInputs>
+        </analogInputs>
+            
+        <analogOutputVoltages>
+        </analogOutputVoltages>
+            
+        <analogOutputCurrents>
+        </analogOutputCurrents>
+        
+        <discreteInputs>
+        </discreteInputs>
+        
+        <discreteOutputs>
+        </discreteOutputs>
+        
+        <digitalInputPulses>
+        </digitalInputPulses>
+        
+        <A429>
+        </A429>
+            
+        <synchros>
+        </synchros>
+        
+        <thermocouples>
+        </thermocouples>
+        
+        <serials>
+        </serials>
+        
+        <dhas>
+        </dhas>
+        
+        <paps>
+        </paps>
+        
+        <A708>
+        </A708>
+        
+        <CAN>
+        </CAN>
+      </override>
+      
+    </RECORD_PLATFORM_IOCONFIG>
+</CONFIGURATION>

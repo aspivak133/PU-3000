@@ -1,0 +1,89 @@
+<!-- ?xml version="1.0" encoding="utf-8"? -->
+<CONFIGURATION name="PLATFORM_CONFIG"  version="00.00.00.02" description="Configuration for the platform" >
+  <RECORD_PLATFORM_IP_CONFIG id="20000" name="PLATFORM_IP_CONFIG" version="01.00.00.00" description="IP configuration" file_name="PLAT_IP_CFG.dat" >
+
+    <IP_ADDRESSES>
+      <POSITION strappingPosition="0">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="1">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="2">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="3">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="4">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="5">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="6">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="7">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="8">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="9">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="10">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="11">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="12">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="13">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="14">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+      <POSITION strappingPosition="15">
+        <GBE0 address="192.168.003.100" gateway="192.168.003.001" subnet_mask="255.255.255.000"/>
+        <GBE1 address="192.168.004.100" gateway="192.168.004.001" subnet_mask="255.255.255.000"/>
+        <GBE2 address="192.168.005.100" gateway="192.168.005.001" subnet_mask="255.255.255.000"/>
+      </POSITION>
+    </IP_ADDRESSES>
+  </RECORD_PLATFORM_IP_CONFIG>
+
+</CONFIGURATION>

@@ -1,0 +1,19 @@
+<!-- ?xml version="1.0" encoding="utf-8"? -->
+<CONFIGURATION name="PLATFORM_CONFIG" version="00.00.00.02" description="Configuration for the platform" >
+
+  <!-- GENERATED_GHS_OBJECT_IDS -->
+
+  <RECORD_EVENTLOG id="500" name="EVENTLOG_CONFIGURATION" version="01.00.00.00" description="EventLog configuration" file_name="EVLOG_CFG.dat" >
+    <PUBLIC_CONFIG>
+      <LOGGER_PORT_CONFIG>
+        <!-- Configuration for event logging test -->
+        <LOGGER_PORT_CLIENT_CONFIG systemId="3" subSystemId="7" partitionLinkName="PART_EVENT_LOG_PART_CMD" faultQueueSize="4" otherEventsQueueSize="4"/>
+      </LOGGER_PORT_CONFIG>      
+
+      <COMMANDER_PORT_CONFIG>
+      </COMMANDER_PORT_CONFIG>
+
+    </PUBLIC_CONFIG>
+  </RECORD_EVENTLOG>
+
+</CONFIGURATION>

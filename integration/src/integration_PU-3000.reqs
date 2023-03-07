@@ -1,0 +1,42 @@
+integrationName = CMD_APP
+executableFileName = CMD_APP.ofp
+integrationParameters = INTEGRATION_PU_3000
+
+platform = { directory =  ../../dependencies/185-617644-001wr/Platform/CMA-70XX_noncert/P3041_GHS/RELEASE_PERF
+             cdn = N
+             dataloader = N
+             audio = N
+             ioConfigCxmlFile = ./PDI/Platform_IO_Config.cxml
+             eventLogConfigCxmlFile = ./PDI/Platform_EVLOG_Config.cxml
+             ipConfigCxmlFile = ./PDI/Platform_IP_Config.cxml
+             gpm = { nbGpm = 1
+                     physicalNLVMSizePerGPM = 0x04000000
+                     windowingGraphicMemory = { NLVMSize = 0x03000000 cachedNLVMSize = 0x04800000 }
+                   }
+             logBookAllocations = { partition = PART_CMD
+                                    memoryRegionPhysicalAddress = 0xF5100000
+                                    memoryRegionSize = 0x2000
+                                  }
+             fileSystemAccess = { disk = 0
+                                  volume = 0
+                                  writer = PART_EVENT_LOG
+                                  readers = PART_CMD },
+                                { disk = 0
+                                  volume = 1
+                                  writer = PART_CMD },
+                                { disk = 0
+                                  volume = 2
+                                  writer = PART_CMD }
+             kernelNVRAMMemoryRegions = { id = NVRAM_1
+                                          size = 4096
+                                          physicalAddress = 0xF5102000
+                                        }
+           }
+           
+applicationPartitions = ../../application/export/PU-3000/PART_CMD/partition_PU-3000.reqs
+scheduleFile = ../gen_src/PU-3000/schedule.reqs
+applicationA653ConnectionsXMLFile = ./channels/Integration_A653Config_Channels.xml
+integrationSourceDir = ../gen_src/PU-3000
+integrationBuildDir = ../build/PU-3000/OFP_temp
+integrationExportDir = ../build/PU-3000/OFP
+integrationChannelBaseIndex = 1000

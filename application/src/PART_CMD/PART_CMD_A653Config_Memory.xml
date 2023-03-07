@@ -1,0 +1,20 @@
+<!-- 
+ * @file PART_CMD_A653Config_Memory.xml
+ *
+ * @brief PART_CMD Partition Memory Configuration
+ *
+ *        
+ -->
+<!--
+ *===========================================================================
+ *
+ * THIS FILE CONTAINS CMC ELECTRONICS PROPRIETARY INFORMATION AND SHALL
+ * NOT BE COPIED OR DISTRIBUTED TO THIRD PARTIES WITHOUT THE PRIOR WRITTEN
+ * PERMISSION OF CMC ELECTRONICS INC.
+ *
+ *===========================================================================
+ -->
+
+<Partition_Memory PartitionIdentifier="50" PartitionName="PART_CMD">
+
+</Partition_Memory>
